@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+:root {
+  --color1: #ff9c00;
+  --color2: #026873;
+  --color3: #0c2247;
+  --color4: #fcaf34;
+
+  --background-cadastro: whitesmoke;
+  --color-placeholder: #024059a4;
+  --input-hover: #02393f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 50%;
+  max-width: 80%;
+  border-radius: 1em;
+  background: var(--background-cadastro);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.63);
+  padding: 2rem;
+}
+
+.input-container {
+  margin: 2em 0;
+}
+
+.input-container label {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.input-container input,
+select {
+  border-radius: 10px;
+  border: 1px solid var(--color2);
+  margin-top: 0.1rem;
+  padding: 0.7rem;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 1.2em;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.479);
+}
+
+.input-container input:focus {
+  outline: none;
+  border: 1px solid black;
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.479);
+  transition-duration: 200ms;
+}
+
+.input-container input::placeholder {
+  color: var(--color-placeholder);
+  font-size: 0.7em;
+}
+
+.button input {
+  padding: 0.5em 0.9em;
+  border-radius: 8px;
+  color: rgb(238, 238, 238);
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
+  cursor: pointer;
+}
+
+.button {
+  text-align: right;
+}
+
+.submit {
+  background-color: var(--color3);
+  border: 1px solid var(--color3);
+}
+
+@media (max-width: 830px) {
+  .button input {
+    font-size: 0.8em;
+    transition-duration: 250ms;
+  }
+}
+
+@media (max-width: 720px) {
+  .button input {
+    padding: 0.3em 0.7em;
+    transition-duration: 250ms;
+  }
+}
+
+@media (max-width: 650px) {
+  .input-container {
+    margin: 1em 0;
+  }
+
+  .input-container label {
+    font-size: 1em;
+  }
+
+  .input-container input {
+    font-size: 0.8em;
+  }
+
+  .button {
+    font-size: 0.9em;
+  }
+
+  #cadastro {
+    top: 35%;
+    background-position: top center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.63);
+  }
+
+  .input-container input::placeholder {
+    font-size: 0.9em;
+  }
+}

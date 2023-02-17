@@ -1,0 +1,5 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(var(--color4), var(--color1));
+  font-family: "Open Sans", sans-serif;
+}
